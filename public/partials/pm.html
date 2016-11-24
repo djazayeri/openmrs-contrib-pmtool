@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-4">
+        <h5>Build Status</h5>
+        <em ng-show="brokenBuilds.loading">Checking Build status</em>
+        <div ng-hide="brokenBuilds.loading || brokenBuilds.broken" class="alert alert-success" role="alert">
+            All CI builds are passing
+        </div>
+        <div ng-show="brokenBuilds.broken" class="alert alert-danger" role="alert">
+            <span ng-repeat="line in brokenBuilds.summary">{{line}}<br/></span>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <summary-issue-list opts="availableCommunityPriority"></summary-issue-list>
+    </div>
+
+    <div class="col-md-4">
+        <summary-issue-list opts="availableCuratedIntro"></summary-issue-list>
+    </div>
+</div>
+
+<div class="row" ng-show="anyAlerts()">
+    <div class="col-md-4" ng-repeat="alertKey in alertKeys" ng-show="queryHasIssues[alertKey]">
+        <summary-issue-list opts="queryHasIssues[alertKey]"></summary-issue-list>
+    </div>
+</div>
+
+<hr/>
+
+<div class="row">
+    <div class="col-md-12">
+        <release-summary opts="refapp2dot5release"></release-summary>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <release-summary opts="platform2dot0dot2release"></release-summary>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <release-summary opts="platform2dot1release"></release-summary>
+    </div>
+</div>

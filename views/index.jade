@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div(ng-app="scrum")
+        nav.navbar.navbar-default
+            div.navbar-header
+                span.navbar-brand OpenMRS PM
+            div.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(ui-sref="pm") PM Overview
+                    li
+                        a(ui-sref="prioritytickets") Priority Tickets
+        ui-view
+    script(src="/javascripts/index.js")
