@@ -434,9 +434,9 @@ angular.module("scrum", ["ngResource", "ui.router", "nvd3"])
                             bigNumber: true
                         });
 
-            doJiraQuery("refapp2dot5release",
-                        "Reference Appliation 2.5",
-                        'project = RA and fixVersion = "Reference Application 2.5"',
+            doJiraQuery("nextRefappRelease",
+                        "Reference Appliation 2.6",
+                        'project = RA and fixVersion = "Reference Application 2.6"',
                         {
                             showNum: 0,
                             bigNumber: false,
@@ -452,7 +452,7 @@ angular.module("scrum", ["ngResource", "ui.router", "nvd3"])
                             minExpected: 1
                         });
 
-            doJiraQuery("platform2dot1release",
+            doJiraQuery("nextPlatformRelease",
                         "Platform 2.1",
                         'project = TRUNK and fixVersion = "Platform 2.1.0"',
                         {
