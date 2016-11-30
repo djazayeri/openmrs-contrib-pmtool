@@ -12,4 +12,4 @@ And see the webapp running on http://localhost:3000
 
 ### Testing the docker build locally
 
-    $ docker run --name pmtool -d -p 3000:3000 djazayeri/openmrs-pmtool:latest
+    $ docker run --name pmtool -d -p 3000:3000 openmrs/openmrs-contrib-pmtool:latest
