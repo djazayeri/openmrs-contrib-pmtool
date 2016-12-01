@@ -1,15 +1,25 @@
 # Various screens to support Dev Project Management for OpenMRS
 
-## Before building
+## Development
 
-    npm install -g mocha
+### Before building
 
-## Run webapp
+    $ npm install -g mocha
+
+### Run webapp
 
     $ npm start
     
 And see the webapp running on http://localhost:3000
 
-### Testing the docker build locally
+## Docker
 
-    $ docker run --name pmtool -d -p 3000:3000 openmrs/openmrs-contrib-pmtool:latest
+### Automatic builds
+
+There is an automatic build on Docker Hub at https://hub.docker.com/r/openmrs/openmrs-contrib-pmtool/
+
+### Running in production
+
+    $ docker pull openmrs/openmrs-contrib-pmtool:latest
+    $ docker rm pmtool
+    $ docker run -d -p 80:3000 --name pmtool openmrs/openmrs-contrib-pmtool:latest
