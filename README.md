@@ -23,3 +23,4 @@ There is an automatic build on Docker Hub at https://hub.docker.com/r/openmrs/op
     $ docker pull openmrs/openmrs-contrib-pmtool:latest
     $ docker rm pmtool
     $ docker run -d -p 80:3000 --name pmtool openmrs/openmrs-contrib-pmtool:latest
+
