@@ -435,7 +435,7 @@ angular.module("scrum", ["ngResource", "ui.router", "nvd3"])
                         });
 
             doJiraQuery("nextRefappRelease",
-                        "Reference Application 2.8.0",
+                        "Reference Application 2.9.0",
                         'project = RA and fixVersion = "Reference Application 2.9.0"',
                         {
                             showNum: 0,
@@ -444,7 +444,7 @@ angular.module("scrum", ["ngResource", "ui.router", "nvd3"])
                         });
 
             doJiraQuery("nextPlatformMaintenenceRelease",
-                        "Platform 2.1.3 Maintenance Release",
+                        "Platform 2.1.4 Maintenance Release",
                         'project = TRUNK and fixVersion = "Platform 2.1.4"',
                         {
                             showNum: 0,
